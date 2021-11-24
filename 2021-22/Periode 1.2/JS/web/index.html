@@ -7,8 +7,56 @@
     <title>F1M2JS</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body><h1>Museum Online Javascript</h1>
+<body>
+    <h1 id="kopje">Museum Online Javascript</h1>
+    <p id="mkBlauw">maak achtergrond blauw </p>
+    <p id="mkGroen">maak achtergrond groen </p>
+    <p id="mkPaars">maak achtergrond Paars </p>
+    <p id="mkOranje">maak achtergrond Oranje </p>
 
+
+    <script>
+        const kopje = document.getElementById('kopje');
+        const mkBlauw = document.getElementById('mkBlauw');
+        const mkGroen = document.getElementById('mkGroen');
+        const mkPaars = document.getElementById('mkPaars');
+        const mkOranje = document.getElementById('mkOranje');
+
+        kopje.style.backgroundColor = "red";
+
+        kopje.addEventListener('click',voeruitKopje);
+        mkBlauw.addEventListener('click',voeruitBlauw);
+        mkGroen.addEventListener('click',voeruitGroen);
+        mkPaars.addEventListener('click',voeruitPaars);
+        mkOranje.addEventListener('click',voeruitOranje);
+
+
+        function voeruitKopje(){
+            kopje.style.backgroundColor = "yellow";
+            kopje.style.color = "black";
+        }
+
+        function voeruitBlauw(){
+            document.body.style.backgroundColor = "blue";
+            document.body.style.color = "white";
+            kopje.style.backgroundColor = "white";
+            kopje.style.color = "black"
+
+        }
+        
+        function voeruitGroen(){
+            document.body.style.backgroundColor = "green";
+        }
+
+        function voeruitPaars(){
+            document.body.style.backgroundColor = "purple";
+        }
+
+        function voeruitOranje(){
+            document.body.style.backgroundColor = "orange";
+        }
+
+    </script>
     
 </body>
 </html>
